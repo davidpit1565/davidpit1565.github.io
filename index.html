@@ -268,11 +268,12 @@ footer a:hover{color:var(--fg)}
     </div>
     <div class="rv">
       <div class="zread"><span id="zr">1</span><small>×</small></div>
-      <div class="zlabel"><span class="zdot" id="zd"></span><span id="zl">Sensor zoom</span></div>
+      <div class="zlabel"><span class="zdot" id="zd"></span><span id="zl">Native detail</span></div>
       <p class="zdesc" id="zdesc">Real pixels straight from the camera.</p>
       <input type="range" id="zrange" min="0" max="1000" value="0" aria-label="Zoom level">
       <div class="zscale" id="zscale"></div>
-      <div class="zones" id="zones"><div data-z="0">Sensor</div><div data-z="1">Enhanced</div><div data-z="2">Extreme</div></div>
+      <div class="zones" id="zones"><div data-z="0">Native</div><div data-z="1">Enhanced</div><div data-z="2">Extreme</div></div>
+      <p class="meta" style="margin-top:14px">Example: iPhone 17 (48 MP main camera). Thresholds depend on your iPhone’s lenses.</p>
     </div>
   </div>
 </div></section>
@@ -307,7 +308,7 @@ footer a:hover{color:var(--fg)}
     <details><summary>Which iPhones does it work on?</summary><p>iPhone 11 and later, running iOS 26. Lens buttons and the zoom range adapt to your model.</p></details>
     <details><summary>Is it really free?</summary><p>Yes. No subscription, no paywall, no ads.</p></details>
     <details><summary>Does it use AI in the cloud?</summary><p>No. The coach runs on your iPhone with Apple's on-device frameworks. Ocello makes no network requests and collects no data.</p></details>
-    <details><summary>What does “Enhanced” mean?</summary><p>Beyond the lens limit, Ocello crops and carefully resamples the image, and labels it. Past 20× fine detail is approximate, and the app says so instead of pretending.</p></details>
+    <details><summary>What does “Enhanced” mean?</summary><p>Beyond the lens limit, Ocello crops and carefully resamples the image, and labels it. Far beyond that, fine detail is approximate, and the app says so instead of pretending.</p></details>
     <details><summary>Where do my photos go?</summary><p>Straight to your Photos library, with add-only permission.</p></details>
     <details><summary>Something is wrong.</summary><p>Write to <a href="support.html" style="text-decoration:underline">support</a>. Every message is read.</p></details>
   </div>
@@ -425,12 +426,12 @@ var zr = document.getElementById("zrange"), zsvg = document.getElementById("zsvg
     zl = document.getElementById("zl"), zd = document.getElementById("zd"), zdesc = document.getElementById("zdesc"),
     zb = document.getElementById("zbadge"), zbt = document.getElementById("zbt"), zones = document.querySelectorAll("#zones div");
 var COL = ["#ffffff","#ffcc40","#ff9f0a"];
-var TXT = [["Sensor zoom","Real pixels straight from the camera."],["Enhanced","Cropped and carefully resampled. Mostly real detail."],["Extreme","Far beyond the sensor. Shapes are reliable; fine detail is approximate."]];
+var TXT = [["Native detail","Real pixels from your lens and sensor. On a 48 MP iPhone that is up to 2×; telephoto models reach further."],["Enhanced","Beyond what the lens captures: cropped and carefully resampled. Mostly real detail."],["Extreme","Far beyond. Shapes are reliable; fine detail is approximate."]];
 function zoomUpdate(){
   var t = zr.value/1000, z = Math.pow(40, t);
-  var zone = z<=10 ? 0 : (z<=20 ? 1 : 2);
+  var zone = z<=2 ? 0 : (z<=5 ? 1 : 2);   // example: iPhone 17 (48 MP main camera)
   zsvg.style.transform = "scale("+z.toFixed(3)+")";
-  var blur = z<=10 ? 0 : (z-10)*.12;
+  var blur = z<=2 ? 0 : (z-2)*.1;
   zsvg.style.filter = blur ? "blur("+blur.toFixed(2)+"px)" : "none";
   zread.textContent = z<10 ? z.toFixed(1).replace(".0","") : Math.round(z);
   zl.textContent = TXT[zone][0]; zdesc.textContent = TXT[zone][1]; zd.style.background = COL[zone];
