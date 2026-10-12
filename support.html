@@ -1,51 +1,19 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kelvo Support</title><meta name="description" content="Contact and help for Kelvo.">
-<meta name="theme-color" content="#000000"><meta property="og:title" content="Kelvo Support"><meta property="og:description" content="Contact and help for Kelvo.">
-<style>
-:root{--bg:#fff;--fg:#1d1d1f;--sub:#6e6e73;--card:#f5f5f7;--line:rgba(0,0,0,.08);--accent:#b07d00;--amber:#ffcc40}
-@media(prefers-color-scheme:dark){:root{--bg:#000;--fg:#f5f5f7;--sub:#a1a1a6;--card:#1c1c1e;--line:rgba(255,255,255,.1);--accent:#ffcc40}}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--fg);font:17px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line)}
-nav .in{max-width:1040px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
-nav b{font-weight:600;color:var(--fg)}nav .links{display:flex;gap:22px;font-size:.92rem}nav .links a{color:var(--sub)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.hero{text-align:center;padding:72px 0 24px}
-.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.02em}
-h1{font-size:clamp(2rem,8.2vw,4.6rem);line-height:1.03;letter-spacing:-.03em;margin:10px 0 14px;font-weight:700}
-h1 em{font-style:normal;background:linear-gradient(90deg,#ffcc40,#ff9f0a);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{max-width:640px;margin:0 auto;color:var(--sub);font-size:1.25rem}
-.cta{margin:30px 0 8px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:980px;font-weight:600;background:var(--fg);color:var(--bg)}
-.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}.btn:hover{text-decoration:none;opacity:.88}
-.note{color:var(--sub);font-size:.9rem}
-.phones{display:flex;gap:28px;justify-content:center;align-items:flex-end;margin:46px 0 0;flex-wrap:wrap}
-.phone{width:250px;aspect-ratio:1320/2868;border-radius:40px;border:7px solid #1a1a1c;background:#000;position:relative;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
-.phone img{width:100%;height:100%;object-fit:cover;display:block}
-.phone.mock{background:linear-gradient(160deg,#2b3140,#14161c 60%,#262932)}
-.phone.mock .grid{position:absolute;inset:14% 0 24% 0;background:linear-gradient(transparent 33%,rgba(255,255,255,.25) 33%,rgba(255,255,255,.25) calc(33% + 1px),transparent calc(33% + 1px),transparent 66%,rgba(255,255,255,.25) 66%,rgba(255,255,255,.25) calc(66% + 1px),transparent calc(66% + 1px)),linear-gradient(90deg,transparent 33%,rgba(255,255,255,.25) 33%,rgba(255,255,255,.25) calc(33% + 1px),transparent calc(33% + 1px),transparent 66%,rgba(255,255,255,.25) 66%,rgba(255,255,255,.25) calc(66% + 1px),transparent calc(66% + 1px))}
-.phone.mock .pill{position:absolute;left:50%;transform:translateX(-50%);bottom:30%;padding:8px 14px;border-radius:99px;background:rgba(255,255,255,.14);backdrop-filter:blur(12px);color:#fff;font-size:.78rem;font-weight:600;white-space:nowrap}
-.phone.mock .shutter{position:absolute;left:50%;transform:translateX(-50%);bottom:5%;width:58px;height:58px;border-radius:50%;border:4px solid #fff;box-shadow:inset 0 0 0 4px #000,inset 0 0 0 40px #fff}
-.phone.mock .zoom{position:absolute;left:50%;transform:translateX(-50%);bottom:17%;display:flex;gap:6px;color:#fff;font-size:.72rem;font-weight:600}
-.phone.mock .zoom span{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center}.phone.mock .zoom span.on{color:#ffcc40}
-section{padding:84px 0}section h2{font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:-.02em;line-height:1.08;margin:0 0 12px}
-section .lead2{color:var(--sub);font-size:1.15rem;max-width:620px;margin:0 0 36px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:var(--card);border-radius:24px;padding:26px}.card h3{margin:10px 0 6px;font-size:1.2rem}.card p{margin:0;color:var(--sub)}
-.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:linear-gradient(145deg,#ffcc40,#ff9f0a);color:#1a1a1c}
-.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.zone{border-radius:20px;padding:20px;background:var(--card);border:1px solid var(--line)}.zone b{display:block;font-size:1.05rem}.zone span{color:var(--sub);font-size:.95rem}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
-details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:600;list-style:none}summary::-webkit-details-marker{display:none}details p{color:var(--sub);margin:10px 0 0}
-footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--sub);font-size:.9rem}footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
-.phone{max-width:30vw}@media(max-width:620px){nav .links a:not(:nth-last-child(-n+2)){display:none}.phones{gap:10px}.phone{border-width:4px;border-radius:24px}.hero{padding-top:48px}}.doc{max-width:700px;margin:0 auto;padding:56px 20px 80px}.doc h1{font-size:2.4rem}.doc h2{margin-top:34px;font-size:1.3rem}.doc li,.doc p{color:var(--fg)}.doc .sub{color:var(--sub)}
+<title>Ocello Support</title><meta name="description" content="Contact and help for Ocello."><meta name="theme-color" content="#000000"><style>
+:root{--bg:#000;--fg:#f5f5f7;--sub:#a1a1a6;--line:rgba(255,255,255,.1);--amber:#ffcc40}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--amber)}nav{position:sticky;top:0;z-index:5;height:52px;display:flex;align-items:center;background:rgba(0,0,0,.6);-webkit-backdrop-filter:saturate(180%) blur(22px);backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid var(--line)}
+nav .in{max-width:1120px;width:100%;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}nav b{font-weight:600}nav .l{display:flex;gap:22px;font-size:.88rem}nav .l a{color:var(--sub);text-decoration:none}nav .l a:hover{color:var(--fg)}
+.doc{max-width:720px;margin:0 auto;padding:72px 24px 100px}.doc h1{font-size:clamp(2.2rem,6vw,3.4rem);letter-spacing:-.035em;line-height:1.05;margin-bottom:8px}
+.doc h2{font-size:1.25rem;letter-spacing:-.01em;margin:38px 0 8px}.doc p,.doc li{color:#d2d2d7}.doc li{margin-left:1.2em;margin-bottom:6px}.doc .sub{color:var(--sub)}
+footer{border-top:1px solid var(--line);padding:28px 24px 50px;color:#6e6e73;font-size:.85rem;text-align:center}footer a{color:#6e6e73;text-decoration:none}footer a:hover{color:var(--fg)}
 </style></head><body>
-<nav><div class="in"><b>Kelvo</b><div class="links"><a href="index.html#features">Features</a><a href="index.html#zoom">Zoom</a><a href="index.html#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></div></div></nav>
+<nav><div class="in"><b><a href="index.html" style="color:inherit;text-decoration:none">Ocello</a></b><div class="l"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></div></div></nav>
 <div class="doc"><h1>Support</h1><p class="sub">We reply within two working days.</p>
 <h2>Contact</h2><p>Email: <a href="mailto:davidpit2008@gmail.com">davidpit2008@gmail.com</a></p>
 <h2>Common questions</h2>
-<p><b>Why is a photo labelled “Enhanced”?</b><br>Beyond what the camera sensor can capture, Kelvo crops and sharpens the image. It does not invent detail. At the highest zoom levels fine detail is approximate, and the app says so.</p>
-<p><b>The camera is black.</b><br>Check Settings → Kelvo → Camera is on.</p>
-<p><b>Photos aren't saving.</b><br>Check Settings → Kelvo → Photos is set to “Add Photos Only” or more.</p>
-<p><b>Camera Control button</b><br>iPhone 16 and later: Settings → Camera → Camera Control, then choose Kelvo (when available).</p></div>
-<footer><div class="wrap"><span>© 2026 David Pitchkhadze. Kelvo is an independent app.</span><span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span></div></footer></body></html>
+<p><b>Why is a photo labelled “Enhanced”?</b><br>Beyond what the camera sensor can capture, Ocello crops and sharpens the image. It does not invent detail. At the highest zoom levels fine detail is approximate, and the app says so.</p><br>
+<p><b>The camera is black.</b><br>Check Settings → Ocello → Camera is on.</p><br>
+<p><b>Photos aren't saving.</b><br>Check Settings → Ocello → Photos is set to “Add Photos Only” or more.</p><br>
+<p><b>Camera Control button</b><br>iPhone 16 and later: Settings → Camera → Camera Control, then choose Ocello (when available).</p></div>
+<footer>© 2026 David Pitchkhadze. Ocello is an independent app. · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></footer></body></html>

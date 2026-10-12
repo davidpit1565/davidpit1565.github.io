@@ -1,79 +1,473 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kelvo — The honest camera</title><meta name="description" content="A camera that coaches you to a better shot. Honest zoom, private by design, free.">
-<meta name="theme-color" content="#000000"><meta property="og:title" content="Kelvo — The honest camera"><meta property="og:description" content="A camera that coaches you to a better shot. Honest zoom, private by design, free.">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ocello — The honest camera</title>
+<meta name="description" content="A camera that coaches you to a better shot. Honest zoom, private by design, free.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Ocello — The honest camera">
+<meta property="og:description" content="A camera that coaches you to a better shot. Honest zoom, private by design, free.">
+<meta property="og:type" content="website">
 <style>
-:root{--bg:#fff;--fg:#1d1d1f;--sub:#6e6e73;--card:#f5f5f7;--line:rgba(0,0,0,.08);--accent:#b07d00;--amber:#ffcc40}
-@media(prefers-color-scheme:dark){:root{--bg:#000;--fg:#f5f5f7;--sub:#a1a1a6;--card:#1c1c1e;--line:rgba(255,255,255,.1);--accent:#ffcc40}}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--fg);font:17px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-nav{position:sticky;top:0;z-index:10;backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line)}
-nav .in{max-width:1040px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
-nav b{font-weight:600;color:var(--fg)}nav .links{display:flex;gap:22px;font-size:.92rem}nav .links a{color:var(--sub)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-.hero{text-align:center;padding:72px 0 24px}
-.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.02em}
-h1{font-size:clamp(2rem,8.2vw,4.6rem);line-height:1.03;letter-spacing:-.03em;margin:10px 0 14px;font-weight:700}
-h1 em{font-style:normal;background:linear-gradient(90deg,#ffcc40,#ff9f0a);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{max-width:640px;margin:0 auto;color:var(--sub);font-size:1.25rem}
-.cta{margin:30px 0 8px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:980px;font-weight:600;background:var(--fg);color:var(--bg)}
-.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}.btn:hover{text-decoration:none;opacity:.88}
-.note{color:var(--sub);font-size:.9rem}
-.phones{display:flex;gap:28px;justify-content:center;align-items:flex-end;margin:46px 0 0;flex-wrap:wrap}
-.phone{width:250px;aspect-ratio:1320/2868;border-radius:40px;border:7px solid #1a1a1c;background:#000;position:relative;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
-.phone img{width:100%;height:100%;object-fit:cover;display:block}
-.phone.mock{background:linear-gradient(160deg,#2b3140,#14161c 60%,#262932)}
-.phone.mock .grid{position:absolute;inset:14% 0 24% 0;background:linear-gradient(transparent 33%,rgba(255,255,255,.25) 33%,rgba(255,255,255,.25) calc(33% + 1px),transparent calc(33% + 1px),transparent 66%,rgba(255,255,255,.25) 66%,rgba(255,255,255,.25) calc(66% + 1px),transparent calc(66% + 1px)),linear-gradient(90deg,transparent 33%,rgba(255,255,255,.25) 33%,rgba(255,255,255,.25) calc(33% + 1px),transparent calc(33% + 1px),transparent 66%,rgba(255,255,255,.25) 66%,rgba(255,255,255,.25) calc(66% + 1px),transparent calc(66% + 1px))}
-.phone.mock .pill{position:absolute;left:50%;transform:translateX(-50%);bottom:30%;padding:8px 14px;border-radius:99px;background:rgba(255,255,255,.14);backdrop-filter:blur(12px);color:#fff;font-size:.78rem;font-weight:600;white-space:nowrap}
-.phone.mock .shutter{position:absolute;left:50%;transform:translateX(-50%);bottom:5%;width:58px;height:58px;border-radius:50%;border:4px solid #fff;box-shadow:inset 0 0 0 4px #000,inset 0 0 0 40px #fff}
-.phone.mock .zoom{position:absolute;left:50%;transform:translateX(-50%);bottom:17%;display:flex;gap:6px;color:#fff;font-size:.72rem;font-weight:600}
-.phone.mock .zoom span{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center}.phone.mock .zoom span.on{color:#ffcc40}
-section{padding:84px 0}section h2{font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:-.02em;line-height:1.08;margin:0 0 12px}
-section .lead2{color:var(--sub);font-size:1.15rem;max-width:620px;margin:0 0 36px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:var(--card);border-radius:24px;padding:26px}.card h3{margin:10px 0 6px;font-size:1.2rem}.card p{margin:0;color:var(--sub)}
-.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:linear-gradient(145deg,#ffcc40,#ff9f0a);color:#1a1a1c}
-.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.zone{border-radius:20px;padding:20px;background:var(--card);border:1px solid var(--line)}.zone b{display:block;font-size:1.05rem}.zone span{color:var(--sub);font-size:.95rem}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
-details{border-bottom:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font-weight:600;list-style:none}summary::-webkit-details-marker{display:none}details p{color:var(--sub);margin:10px 0 0}
-footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--sub);font-size:.9rem}footer .wrap{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between}
-.phone{max-width:30vw}@media(max-width:620px){nav .links a:not(:nth-last-child(-n+2)){display:none}.phones{gap:10px}.phone{border-width:4px;border-radius:24px}.hero{padding-top:48px}}.doc{max-width:700px;margin:0 auto;padding:56px 20px 80px}.doc h1{font-size:2.4rem}.doc h2{margin-top:34px;font-size:1.3rem}.doc li,.doc p{color:var(--fg)}.doc .sub{color:var(--sub)}
-</style></head><body>
-<nav><div class="in"><b>Kelvo</b><div class="links"><a href="index.html#features">Features</a><a href="index.html#zoom">Zoom</a><a href="index.html#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></div></div></nav>
+:root{
+  --bg:#000;--g1:#0e0f12;--g2:#16181e;--g3:#262932;--line:rgba(255,255,255,.09);
+  --fg:#f5f5f7;--sub:#a1a1a6;--dim:#6e6e73;--amber:#ffcc40;--orange:#ff9f0a;
+  --ease:cubic-bezier(.22,.9,.24,1);--ease2:cubic-bezier(.65,0,.35,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",system-ui,sans-serif}
+.eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:600}
+.big{font-weight:700;letter-spacing:-.035em;line-height:1.02}
+.lead{color:var(--sub);font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.45;max-width:34em}
 
-<main><div class="wrap hero"><div class="eyebrow">Kelvo for iPhone</div>
-<h1>The honest camera.<br><em>See what was really there.</em></h1>
-<p class="lead">A camera that coaches you to a better shot. Honest zoom, private by design, free.</p>
-<div class="cta"><span class="btn" style="opacity:.6;cursor:default">Coming soon to the App Store</span><a class="btn ghost" href="#features">See how it works</a></div>
-<p class="note">Free · iPhone 11 and later · iOS 26</p>
-<div class="phones"><div class="phone mock"><div class="grid"></div><div class="pill">✓ Move left a little</div><div class="zoom"><span class="">0.5</span><span class="on">1</span><span class="">2</span></div><div class="shutter"></div></div><div class="phone mock"><div class="grid"></div><div class="pill">Level your phone</div><div class="zoom"><span class="">0.5</span><span class="on">1</span><span class="">2</span></div><div class="shutter"></div></div><div class="phone mock"><div class="grid"></div><div class="pill">Hold steady</div><div class="zoom"><span class="">0.5</span><span class="on">1</span><span class="">2</span></div><div class="shutter"></div></div></div></div>
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;height:52px;display:flex;align-items:center;
+  background:rgba(0,0,0,.55);-webkit-backdrop-filter:saturate(180%) blur(22px);backdrop-filter:saturate(180%) blur(22px);
+  border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+nav .brand{font-weight:600;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+nav .brand i{width:22px;height:22px;border-radius:6px;background:radial-gradient(circle at 50% 50%,var(--amber) 0 24%,#2a2d36 25% 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+nav .links{display:flex;gap:26px;font-size:.84rem;color:var(--sub)}
+nav .links a{transition:color .25s}nav .links a:hover{color:var(--fg)}
 
-<section id="features"><div class="wrap"><h2>Take better photos. Without learning photography.</h2>
-<p class="lead2">Kelvo watches your frame live and tells you, in plain words, how to fix it — before you press the shutter.</p>
-<div class="cards">
-<div class="card"><div class="ico">✦</div><h3>A coach in your viewfinder</h3><p>“Move left a little.” “Level your phone.” “Hold steady.” Small, timely tips, computed on your iPhone — never sent anywhere.</p></div>
-<div class="card"><div class="ico">⌕</div><h3>Zoom you can trust</h3><p>Real sensor zoom first. Anything beyond it is clearly labelled, so you always know what you're getting.</p></div>
-<div class="card"><div class="ico">◐</div><h3>Manual controls, explained</h3><p>ISO, shutter, focus and brightness with a one-line hint on what each one does. Tap a value to go back to automatic.</p></div>
-<div class="card"><div class="ico">▦</div><h3>Native from the first tap</h3><p>Built for iOS 26 with Liquid Glass, system haptics and Dynamic Type. It feels like it belongs on your iPhone.</p></div>
-<div class="card"><div class="ico">⚿</div><h3>Private by design</h3><p>No account. No tracking. No ads. Works fully offline. Photos are saved only to your library.</p></div>
-<div class="card"><div class="ico">◎</div><h3>Free</h3><p>No subscription and no paywall. What you see is what you get.</p></div>
-</div></div></section>
+/* hero */
+.hero{position:relative;padding:120px 0 40px;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:-10%;width:900px;height:900px;transform:translateX(-50%);
+  background:radial-gradient(closest-side,rgba(255,204,64,.13),transparent 70%);pointer-events:none}
+.hero h1{font-size:clamp(2.7rem,8.6vw,6.4rem);margin:16px 0 18px}
+.hero h1 span{display:block;color:var(--sub)}
+.hero .lead{margin:0 auto}
+.cta{margin:30px 0 14px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;font-weight:600;font-size:.98rem}
+.pill.solid{background:var(--fg);color:#000}
+.pill.soon{background:rgba(255,255,255,.09);color:var(--sub);cursor:default}
+.pill.line{border:1px solid var(--line);color:var(--fg);transition:background .25s}.pill.line:hover{background:rgba(255,255,255,.06)}
+.meta{color:var(--dim);font-size:.86rem}
+.hero-phone{margin:46px auto 0;display:flex;justify-content:center}
 
-<section id="zoom" style="background:var(--card)"><div class="wrap"><h2>Honest zoom, up to 40×.</h2>
-<p class="lead2">Past what the camera can physically capture, any app is reconstructing detail. Kelvo tells you exactly where that line is.</p>
-<div class="zones">
-<div class="zone"><b><span class="dot" style="background:#30d158"></span>Sensor zoom</b><span>Up to about 10×. Real pixels from the camera. No label.</span></div>
-<div class="zone"><b><span class="dot" style="background:#ffcc40"></span>Enhanced</b><span>Beyond the sensor. Crop and careful resampling; mostly real detail.</span></div>
-<div class="zone"><b><span class="dot" style="background:#ff9f0a"></span>Extreme</b><span>Far beyond. Shapes are reliable; fine detail is approximate and marked as such.</span></div>
-</div></div></section>
+/* phone */
+.phone{--w:clamp(250px,30vw,330px);width:var(--w);aspect-ratio:9/19.2;border-radius:calc(var(--w)*.15);padding:calc(var(--w)*.028);
+  background:linear-gradient(145deg,#3a3d46,#101114 40%,#2a2c34);box-shadow:0 60px 120px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08),inset 0 0 0 1px rgba(255,255,255,.06);position:relative}
+.phone .screen{position:relative;width:100%;height:100%;border-radius:calc(var(--w)*.124);overflow:hidden;background:#000;isolation:isolate}
+.phone .island{position:absolute;top:2.2%;left:50%;transform:translateX(-50%);width:28%;height:3.2%;background:#000;border-radius:99px;z-index:6}
+.vf{position:absolute;inset:0;overflow:hidden;background:#111}
+.vf svg.scene{position:absolute;inset:-6% -6% -6% -6%;width:112%;height:112%}
+.world{transform-origin:200px 360px;transition:transform 1.6s var(--ease2)}
+.gridl{position:absolute;inset:0;background:
+  linear-gradient(90deg,transparent 33.2%,rgba(255,255,255,.22) 33.3%,transparent 33.5%,transparent 66.5%,rgba(255,255,255,.22) 66.6%,transparent 66.8%),
+  linear-gradient(transparent 33.2%,rgba(255,255,255,.22) 33.3%,transparent 33.5%,transparent 66.5%,rgba(255,255,255,.22) 66.6%,transparent 66.8%);opacity:.7;pointer-events:none}
+.level{position:absolute;left:50%;top:46%;width:30%;height:2px;margin-left:-15%;border-radius:2px;background:rgba(255,255,255,.85);transition:transform 1.4s var(--ease2),background .4s,width .4s,margin-left .4s;transform:rotate(-6deg)}
+.ui{position:absolute;left:0;right:0;z-index:4;color:#fff;font-size:calc(var(--w)*.04)}
+.ui.top{top:5.4%;display:flex;justify-content:space-between;padding:0 6%}
+.gbtn{width:calc(var(--w)*.115);height:calc(var(--w)*.115);border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 .5px 0 rgba(255,255,255,.35)}
+.gbtn svg{width:46%;height:46%;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.coach{position:absolute;left:50%;bottom:30.5%;transform:translateX(-50%);z-index:5;display:flex;align-items:center;gap:7px;padding:.62em 1.1em;border-radius:99px;
+  background:rgba(40,42,50,.55);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);box-shadow:inset 0 .5px 0 rgba(255,255,255,.35);white-space:nowrap;font-weight:600;font-size:calc(var(--w)*.042);transition:opacity .35s,transform .5s var(--ease)}
+.coach svg{width:1.05em;height:1.05em;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.coach.swap{opacity:0;transform:translateX(-50%) translateY(6px)}
+.ui.bottom{bottom:3.2%;display:flex;flex-direction:column;align-items:center;gap:calc(var(--w)*.04)}
+.zr{display:flex;gap:6px}.zr b{width:calc(var(--w)*.1);height:calc(var(--w)*.1);border-radius:50%;display:grid;place-items:center;font-size:calc(var(--w)*.036);background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);font-weight:600}
+.zr b.on{color:var(--amber);width:calc(var(--w)*.12);height:calc(var(--w)*.12)}
+.modes{display:flex;padding:3px;border-radius:99px;background:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);font-weight:600;font-size:calc(var(--w)*.037)}
+.modes span{padding:.45em 1.1em;color:#fff}.modes span.on{color:var(--amber)}
+.sh{width:100%;display:flex;justify-content:space-between;align-items:center;padding:0 12%}
+.thumb{width:calc(var(--w)*.14);height:calc(var(--w)*.14);border-radius:calc(var(--w)*.03);background:rgba(255,255,255,.12);overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.thumb i{position:absolute;inset:0;background:linear-gradient(#3b4a6b,#c78a52 70%,#2a2d36);opacity:0;transform:scale(.4);transition:opacity .4s,transform .6s var(--ease)}
+[data-s="3"] .thumb i{opacity:1;transform:none}
+.shutter{width:calc(var(--w)*.2);height:calc(var(--w)*.2);border-radius:50%;border:calc(var(--w)*.012) solid #fff;display:grid;place-items:center}
+.shutter::after{content:"";width:78%;height:78%;border-radius:50%;background:#fff;transition:transform .2s}
+[data-s="3"] .shutter::after{animation:press .5s .35s var(--ease)}
+@keyframes press{40%{transform:scale(.82)}}
+.flip{width:calc(var(--w)*.14);height:calc(var(--w)*.14)}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:7;pointer-events:none}
+[data-s="3"] .flash{animation:flash .6s .35s ease-out}
+@keyframes flash{0%{opacity:0}12%{opacity:.85}100%{opacity:0}}
+.ring{transform-box:fill-box;transform-origin:center;transition:transform 1.5s var(--ease2),stroke .5s,opacity .5s}
+.ringbox{fill:none;stroke-width:2.4;stroke-linecap:round}
+[data-s="2"] .ring{animation:jit 2.4s ease-in-out infinite}
+@keyframes jit{0%,100%{translate:0 0}25%{translate:1.2px -1px}55%{translate:-1px 1.4px}80%{translate:1px 1px}}
+.reduced .ring,.reduced [data-s="2"] .ring{animation:none}
 
-<section id="faq"><div class="wrap"><h2>Questions</h2><div style="margin-top:18px">
-<details><summary>Which iPhones does it work on?</summary><p>iPhone 11 and later, running iOS 26. Zoom range and lens buttons adapt to your model.</p></details>
-<details><summary>Is it really free?</summary><p>Yes. There is no subscription and no paywall.</p></details>
-<details><summary>Does it use the internet or AI in the cloud?</summary><p>No. The coach runs on your iPhone using Apple's on-device frameworks. Kelvo works offline and collects no data.</p></details>
-<details><summary>Can I open it from the Camera Control button?</summary><p>On iPhone 16 and later: Settings → Camera → Camera Control, then choose Kelvo (when available).</p></details>
-<details><summary>Where do my photos go?</summary><p>Straight to your Photos library. Kelvo can only add photos; it cannot read your existing ones.</p></details>
-<details><summary>I found a problem.</summary><p>Please <a href="support.html">contact support</a>. We read every message.</p></details>
-</div></div></section></main>
-<footer><div class="wrap"><span>© 2026 David Pitchkhadze. Kelvo is an independent app.</span><span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span></div></footer></body></html>
+/* sections */
+section{position:relative;padding:130px 0}
+section h2{font-size:clamp(2.1rem,5.6vw,4rem);margin:12px 0 18px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.noanim *{transition:none!important;animation:none!important}
+.noanim .rv{opacity:1;transform:none}
+.noanim .priv .line{color:var(--fg)}
+
+/* sticky story */
+.story{padding:0}
+.story .stage{position:relative;height:340vh}
+.story .pin{position:sticky;top:0;height:100vh;display:flex;align-items:center}
+.story .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;width:100%}
+.steps{position:relative;min-height:340px}
+.step{position:absolute;inset:0 auto auto 0;opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease);pointer-events:none;max-width:30em}
+.step.on{opacity:1;transform:none;pointer-events:auto}
+.step .n{font-variant-numeric:tabular-nums;color:var(--amber);font-weight:600;letter-spacing:.1em;font-size:.82rem}
+.step h3{font-size:clamp(1.9rem,4.4vw,3.2rem);letter-spacing:-.03em;line-height:1.05;margin:10px 0 14px;font-weight:700}
+.dots{display:flex;gap:8px;margin-top:30px}.dots i{width:28px;height:3px;border-radius:3px;background:var(--g3);transition:background .4s,width .4s}.dots i.on{background:var(--amber);width:44px}
+
+/* zoom */
+.zoomsec{background:linear-gradient(var(--bg),var(--g1) 20%,var(--g1) 80%,var(--bg))}
+.zgrid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-top:56px}
+.zview{position:relative;aspect-ratio:4/5;max-width:460px;width:100%;border-radius:34px;overflow:hidden;background:#111;box-shadow:0 0 0 1px var(--line),0 50px 100px -40px #000;margin:0 auto}
+.zview svg{position:absolute;inset:0;width:100%;height:100%;transform-origin:88% 49%}
+.zbadge{position:absolute;left:50%;top:16px;transform:translateX(-50%);padding:.5em 1em;border-radius:99px;font-size:.8rem;font-weight:600;background:rgba(40,42,50,.6);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);display:flex;align-items:center;gap:8px;transition:opacity .3s,color .3s;white-space:nowrap}
+.zbadge.hidden{opacity:0}
+.zread{font-size:clamp(4.5rem,13vw,9rem);font-weight:700;letter-spacing:-.05em;line-height:.9;font-variant-numeric:tabular-nums}
+.zread small{font-size:.3em;color:var(--sub);letter-spacing:0;margin-left:.1em}
+.zlabel{display:flex;align-items:center;gap:10px;margin:14px 0 8px;font-weight:600;font-size:1.15rem}
+.zdot{width:10px;height:10px;border-radius:50%;background:#fff;transition:background .3s}
+.zdesc{color:var(--sub);min-height:3.2em;max-width:26em}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:26px 0 4px;cursor:pointer;touch-action:pan-y}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:var(--trk,var(--g3))}
+input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:var(--trk,var(--g3))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-11px;border-radius:50%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.5);border:0}
+input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#fff;border:0;box-shadow:0 2px 10px rgba(0,0,0,.5)}
+.zscale{position:relative;height:18px;font-size:.74rem;color:var(--dim)}.zscale span{position:absolute;transform:translateX(-50%)}
+.zones{display:flex;gap:6px;margin-top:6px;font-size:.78rem;color:var(--sub)}
+.zones div{padding:.35em .8em;border-radius:99px;border:1px solid var(--line);transition:all .3s}
+.zones div.on{color:#000;border-color:transparent}
+
+/* manual */
+.msec .row{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-top:56px}
+.dial{padding:22px 0;border-bottom:1px solid var(--line)}
+.dial:first-child{padding-top:0}
+.dial .top{display:flex;justify-content:space-between;align-items:baseline}
+.dial b{font-size:1.1rem}.dial .val{font-variant-numeric:tabular-nums;color:var(--amber);font-weight:600}
+.dial p{color:var(--sub);font-size:.95rem;margin-top:2px;min-height:1.5em}
+.mview{position:relative;aspect-ratio:4/5;max-width:420px;width:100%;border-radius:34px;overflow:hidden;box-shadow:0 0 0 1px var(--line),0 50px 100px -40px #000;margin:0 auto;background:#111}
+.mview svg{position:absolute;inset:0;width:100%;height:100%}
+.mview .noise{position:absolute;inset:0;mix-blend-mode:overlay;pointer-events:none}
+.mview .vig{position:absolute;inset:0;box-shadow:inset 0 0 120px rgba(0,0,0,.35)}
+
+/* privacy */
+.priv{text-align:center;padding:150px 0}
+.priv .line{display:block;font-size:clamp(2.6rem,9vw,7rem);font-weight:700;letter-spacing:-.045em;line-height:1.02;color:var(--g3);transition:color .9s var(--ease)}
+.priv .line.in{color:var(--fg)}
+.priv .line em{font-style:normal;color:var(--amber)}
+.air{display:inline-flex;align-items:center;gap:14px;margin-top:44px;padding:12px 18px 12px 14px;border-radius:99px;background:var(--g2);box-shadow:0 0 0 1px var(--line);font-size:.95rem;color:var(--sub)}
+.air i{width:46px;height:28px;border-radius:99px;background:#ff9f0a;position:relative}.air i::after{content:"";position:absolute;top:2px;right:2px;width:24px;height:24px;border-radius:50%;background:#fff}
+.air b{color:var(--fg);font-weight:600}
+
+/* faq + footer */
+.faq{max-width:760px;margin:36px auto 0}
+details{border-top:1px solid var(--line);padding:20px 0}details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:1.08rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:12px;height:12px;border-right:2px solid var(--sub);border-bottom:2px solid var(--sub);transform:rotate(45deg);transition:transform .35s var(--ease);margin-right:6px}
+details[open] summary::after{transform:rotate(-135deg)}
+details p{color:var(--sub);margin-top:10px;max-width:38em}
+.final{text-align:center;padding:140px 0}
+.final h2{font-size:clamp(2.4rem,7vw,5rem)}
+footer{border-top:1px solid var(--line);padding:30px 0 60px;color:var(--dim);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a:hover{color:var(--fg)}
+
+@media(max-width:860px){
+  nav .links a:nth-child(-n+3){display:none}
+  .story .grid,.zgrid,.msec .row{grid-template-columns:1fr;gap:36px}
+  .story .stage{height:420vh}
+  .story .pin{align-items:flex-start;padding-top:70px}
+  .story .grid{gap:14px}
+  .steps{min-height:210px;order:2}.story .phone-col{order:1;display:flex;justify-content:center}
+  .story .phone{--w:clamp(170px,48vw,230px)}
+  .step h3{font-size:1.7rem}.step .lead{font-size:.98rem}
+  section{padding:90px 0}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- Shared scene (one drawing reused everywhere) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="sky" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="720">
+      <stop offset="0" stop-color="#233252"/><stop offset=".5" stop-color="#8a6a7e"/><stop offset=".78" stop-color="#e9a763"/><stop offset="1" stop-color="#f4c98a"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3e58"/><stop offset="1" stop-color="#262a3e"/></linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2233"/><stop offset="1" stop-color="#14161f"/></linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3d1"/><stop offset=".35" stop-color="#ffd58a" stop-opacity=".8"/><stop offset="1" stop-color="#ffb55a" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 1.4 -.2"/></filter>
+    <g id="scene">
+      <rect x="-500" y="-400" width="1400" height="1900" fill="url(#sky)"/>
+      <circle cx="120" cy="420" r="150" fill="url(#sun)"/>
+      <g fill="#fff" opacity=".5"><circle cx="60" cy="90" r="1.2"/><circle cx="310" cy="60" r="1"/><circle cx="220" cy="130" r="1.3"/><circle cx="360" cy="170" r="1"/><circle cx="150" cy="40" r="1"/></g>
+      <path d="M-500 480 L-20 470 C 60 430 120 450 190 425 S 330 440 430 410 L900 395 L900 1400 L-500 1400Z" fill="#2e3249"/>
+      <!-- distant town with fine detail (windows) -->
+      <g transform="translate(318 372)" fill="#1b1d2b">
+        <rect x="0" y="14" width="22" height="40"/><rect x="26" y="4" width="18" height="50"/><rect x="48" y="20" width="26" height="34"/><rect x="78" y="10" width="16" height="44"/>
+        <g fill="#ffd58a" opacity=".9">
+          <rect x="4" y="20" width="3" height="3"/><rect x="10" y="20" width="3" height="3"/><rect x="4" y="28" width="3" height="3"/><rect x="15" y="36" width="3" height="3"/>
+          <rect x="30" y="10" width="3" height="3"/><rect x="36" y="10" width="3" height="3"/><rect x="30" y="18" width="3" height="3"/><rect x="36" y="26" width="3" height="3"/><rect x="30" y="34" width="3" height="3"/>
+          <rect x="52" y="26" width="3" height="3"/><rect x="58" y="26" width="3" height="3"/><rect x="64" y="34" width="3" height="3"/><rect x="52" y="42" width="3" height="3"/>
+          <rect x="82" y="16" width="3" height="3"/><rect x="88" y="24" width="3" height="3"/><rect x="82" y="32" width="3" height="3"/>
+        </g>
+        <path d="M46 4 L53 -10 L60 4Z" fill="#1b1d2b"/><rect x="52.5" y="-24" width="1.2" height="16" fill="#1b1d2b"/>
+      </g>
+      <path d="M-500 570 L-20 560 C 80 520 160 540 240 515 S 360 520 430 500 L900 490 L900 1400 L-500 1400Z" fill="#191b28"/>
+      <!-- subject -->
+      <g class="subject" fill="#0d0e14">
+        <circle cx="270" cy="352" r="19"/>
+        <path d="M232 470 C232 420 246 388 270 388 C294 388 308 420 308 470 L308 560 L232 560Z"/>
+      </g>
+      <path d="M262 366 C266 372 274 372 278 366" stroke="#e9a763" stroke-opacity=".55" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <rect x="-500" y="-400" width="1400" height="1900" fill="#ffb55a" opacity=".05"/>
+    </g>
+  </defs>
+</svg>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><i></i>Ocello</a>
+  <div class="links"><a href="#coach">Coach</a><a href="#zoom">Zoom</a><a href="#manual">Manual</a><a href="#private">Private</a><a href="support.html">Support</a></div>
+</div></nav>
+
+<main id="top">
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow rv">Ocello for iPhone</div>
+    <h1 class="big rv">See what was<br>really there.<span>The honest camera.</span></h1>
+    <p class="lead rv">A camera that coaches you to a better shot. Honest zoom, private by design, free.</p>
+    <div class="cta rv"><span class="pill soon" aria-disabled="true">Coming soon to the App Store</span><a class="pill line" href="#coach">See how it works</a></div>
+    <div class="meta rv">Free · iPhone 11 and later · iOS 26</div>
+    <div class="hero-phone rv"><div data-phone="auto"></div></div>
+  </div>
+</header>
+
+<section class="story" id="coach">
+  <div class="stage" id="stage">
+    <div class="pin"><div class="wrap"><div class="grid">
+      <div class="steps" id="steps">
+        <div class="step on" data-i="0"><div class="n">01 — FRAME</div><h3>It reads your frame, live.</h3><p class="lead">Faces, horizon and shake are analysed on your iPhone several times a second. Nothing leaves the device.</p></div>
+        <div class="step" data-i="1"><div class="n">02 — LEVEL</div><h3>Small tips, in plain words.</h3><p class="lead">“Move right a little.” “Level your phone.” No jargon, no settings to learn. Only when it helps, never nagging.</p></div>
+        <div class="step" data-i="2"><div class="n">03 — STEADY</div><h3>Then it tells you to hold still.</h3><p class="lead">A shaky hand is the most common reason a photo is soft. Ocello notices before you press.</p></div>
+        <div class="step" data-i="3"><div class="n">04 — SHOOT</div><h3>The ring locks. You shoot.</h3><p class="lead">When the framing is right, the ring tightens and turns amber, with a gentle haptic. The shot is yours.</p>
+          <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i></div></div>
+      </div>
+      <div class="phone-col"><div data-phone="scroll"></div></div>
+    </div></div></div>
+  </div>
+</section>
+
+<section class="zoomsec" id="zoom"><div class="wrap">
+  <div class="eyebrow rv">Honest zoom</div>
+  <h2 class="big rv">Up to 40×.<br>And it tells you the truth.</h2>
+  <p class="lead rv">Past what the lens can physically capture, every camera app is reconstructing detail. Drag the slider and see where that line is.</p>
+  <div class="zgrid">
+    <div class="zview rv" id="zview">
+      <svg viewBox="0 150 400 500" preserveAspectRatio="xMidYMid slice" id="zsvg"><use href="#scene" width="400" height="500"/></svg>
+      <div class="zbadge hidden" id="zbadge"><span class="zdot"></span><span id="zbt"></span></div>
+    </div>
+    <div class="rv">
+      <div class="zread"><span id="zr">1</span><small>×</small></div>
+      <div class="zlabel"><span class="zdot" id="zd"></span><span id="zl">Sensor zoom</span></div>
+      <p class="zdesc" id="zdesc">Real pixels straight from the camera.</p>
+      <input type="range" id="zrange" min="0" max="1000" value="0" aria-label="Zoom level">
+      <div class="zscale" id="zscale"></div>
+      <div class="zones" id="zones"><div data-z="0">Sensor</div><div data-z="1">Enhanced</div><div data-z="2">Extreme</div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="msec" id="manual"><div class="wrap">
+  <div class="eyebrow rv">Manual, explained</div>
+  <h2 class="big rv">Pro controls<br>without the homework.</h2>
+  <p class="lead rv">ISO, shutter, focus. Each one says what it does as you move it. One tap returns it to automatic.</p>
+  <div class="row">
+    <div class="rv">
+      <div class="dial"><div class="top"><b>ISO</b><span class="val" id="vISO">100</span></div><input type="range" id="rISO" min="0" max="100" value="30" aria-label="ISO"><p id="pISO"></p></div>
+      <div class="dial"><div class="top"><b>Shutter</b><span class="val" id="vSH">1/250</span></div><input type="range" id="rSH" min="0" max="100" value="35" aria-label="Shutter speed"><p id="pSH"></p></div>
+      <div class="dial"><div class="top"><b>Focus</b><span class="val" id="vFO">Subject</span></div><input type="range" id="rFO" min="0" max="100" value="50" aria-label="Focus"><p id="pFO"></p></div>
+    </div>
+    <div class="mview rv" id="mview"><svg id="msvg" viewBox="0 150 400 500" preserveAspectRatio="xMidYMid slice"><use href="#scene" width="400" height="500"/></svg>
+      <svg class="noise" id="mnoise" viewBox="0 150 400 500" preserveAspectRatio="none" style="opacity:0"><rect x="0" y="150" width="400" height="500" filter="url(#grain)"/></svg><div class="vig"></div></div>
+  </div>
+</div></section>
+
+<section class="priv" id="private"><div class="wrap">
+  <span class="line">No account.</span>
+  <span class="line">No tracking.</span>
+  <span class="line">No network.<em> Free.</em></span>
+  <div class="air rv"><i></i><span><b>Airplane mode on.</b> The coach still works.</span></div>
+  <p class="lead rv" style="margin:26px auto 0">Photos go straight to your library. Ocello can only add pictures. It can never read the ones you already have.</p>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="eyebrow rv" style="text-align:center">Questions</div>
+  <h2 class="big rv" style="text-align:center">Good to know.</h2>
+  <div class="faq rv">
+    <details><summary>Which iPhones does it work on?</summary><p>iPhone 11 and later, running iOS 26. Lens buttons and the zoom range adapt to your model.</p></details>
+    <details><summary>Is it really free?</summary><p>Yes. No subscription, no paywall, no ads.</p></details>
+    <details><summary>Does it use AI in the cloud?</summary><p>No. The coach runs on your iPhone with Apple's on-device frameworks. Ocello makes no network requests and collects no data.</p></details>
+    <details><summary>What does “Enhanced” mean?</summary><p>Beyond the lens limit, Ocello crops and carefully resamples the image, and labels it. Past 20× fine detail is approximate, and the app says so instead of pretending.</p></details>
+    <details><summary>Where do my photos go?</summary><p>Straight to your Photos library, with add-only permission.</p></details>
+    <details><summary>Something is wrong.</summary><p>Write to <a href="support.html" style="text-decoration:underline">support</a>. Every message is read.</p></details>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <h2 class="big rv">Take the shot<br>you saw.</h2>
+  <div class="cta rv"><span class="pill soon" aria-disabled="true">Coming soon to the App Store</span></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 David Pitchkhadze. Ocello is an independent app.</span><span><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></span></div></footer>
+
+<script>
+(function(){
+"use strict";
+var reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+var qs = location.search;
+if (qs.indexOf("static")>-1) document.documentElement.classList.add("noanim");
+if (reduced) document.documentElement.classList.add("reduced");
+
+/* ---------- phone component ---------- */
+var COACH = [
+  {t:"Move right a little", i:'<path d="M5 12h14M13 6l6 6-6 6"/>'},
+  {t:"Level your phone",    i:'<path d="M3 12h18M7 8v8M17 8v8"/>'},
+  {t:"Hold steady",         i:'<path d="M12 3v7m0 0l3-3m-3 3L9 7M6 14c0 4 2.5 7 6 7s6-3 6-7"/>'},
+  {t:"Great framing",       i:'<path d="M5 12.5l4.5 4.5L19 7.5"/>'}
+];
+var WORLD = [
+  "translate(0px,0px) rotate(6deg)",
+  "translate(-70px,0px) rotate(6deg)",
+  "translate(-70px,0px) rotate(0deg)",
+  "translate(-70px,0px) rotate(0deg)"
+];
+var RING = [2.15, 1.7, 1.25, 1];
+function phoneHTML(){
+  return '<div class="phone" data-s="0"><div class="screen"><div class="island"></div>'+
+  '<div class="vf"><svg class="scene" viewBox="0 0 400 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+
+    '<g class="world"><use href="#scene" width="400" height="720"/>'+
+      '<g class="ring"><circle class="ringbox" cx="270" cy="372" r="52" stroke="rgba(255,255,255,.85)"/></g>'+
+    '</g></svg><div class="gridl"></div><div class="level"></div></div>'+
+  '<div class="ui top"><div class="gbtn"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>'+
+    '<div class="gbtn"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 13V9M9 3h6"/></svg></div>'+
+    '<div class="gbtn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div></div>'+
+  '<div class="coach"><svg viewBox="0 0 24 24"></svg><span></span></div>'+
+  '<div class="ui bottom"><div class="zr"><b>0.5</b><b class="on">1</b><b>2</b></div>'+
+    '<div class="modes"><span class="on">Photo</span><span>Manual</span></div>'+
+    '<div class="sh"><div class="thumb"><i></i></div><div class="shutter"></div>'+
+    '<div class="gbtn flip"><svg viewBox="0 0 24 24"><path d="M4 9a8 8 0 0113-3l3 3M20 15a8 8 0 01-13 3l-3-3M20 4v5h-5M4 20v-5h5"/></svg></div></div></div>'+
+  '<div class="flash"></div></div></div>';
+}
+function mount(el){
+  el.innerHTML = phoneHTML();
+  var p = el.firstChild, world = p.querySelector(".world"), ring = p.querySelector(".ring"),
+      rbox = p.querySelector(".ringbox"), level = p.querySelector(".level"),
+      coach = p.querySelector(".coach"), cs = coach.querySelector("span"), ci = coach.querySelector("svg");
+  var cur = -1, busy = null;
+  function apply(s, instant){
+    if (s===cur) return; cur = s; p.setAttribute("data-s", s);
+    world.style.transform = WORLD[s];
+    ring.style.transform = "scale("+RING[s]+")";
+    var locked = s===3, ok = s>=2;
+    rbox.setAttribute("stroke", locked ? "#ffcc40" : "rgba(255,255,255,.85)");
+    level.style.transform = "rotate("+(s<2?-6:0)+"deg)";
+    level.style.background = ok ? "#ffcc40" : "rgba(255,255,255,.85)";
+    level.style.width = ok ? "36%" : "30%"; level.style.marginLeft = ok ? "-18%" : "-15%";
+    coach.classList.add("swap");
+    clearTimeout(busy);
+    busy = setTimeout(function(){
+      cs.textContent = COACH[s].t; ci.innerHTML = COACH[s].i;
+      ci.style.stroke = locked ? "#ffcc40" : "#fff"; coach.classList.remove("swap");
+    }, instant ? 0 : 260);
+    if (instant) { coach.classList.remove("swap"); cs.textContent = COACH[s].t; ci.innerHTML = COACH[s].i; }
+  }
+  apply(0, true);
+  return {set:apply};
+}
+
+var phones = document.querySelectorAll("[data-phone]"), auto = null, scrollP = null;
+phones.forEach(function(el){
+  var m = mount(el);
+  if (el.getAttribute("data-phone")==="auto") auto = m; else scrollP = m;
+});
+/* hero autoplay loop */
+if (auto){
+  var seq = [0,1,2,3], k = 0, delays = [2200,2000,2200,3600], timer;
+  var forced = /[?&]s=(\d)/.exec(qs);
+  if (forced){ auto.set(+forced[1], true); }
+  else if (reduced){ auto.set(3,true); }
+  else {
+    (function tick(){ auto.set(seq[k%4]); timer = setTimeout(tick, delays[k%4]); k++; })();
+    document.addEventListener("visibilitychange", function(){ if (document.hidden) clearTimeout(timer); else { clearTimeout(timer); (function t2(){ auto.set(seq[k%4]); timer=setTimeout(t2, delays[k%4]); k++; })(); } });
+  }
+}
+
+/* ---------- sticky story driven by scroll ---------- */
+var stage = document.getElementById("stage"), steps = document.querySelectorAll(".step"), dots = document.querySelectorAll("#dots i");
+function storyUpdate(){
+  var r = stage.getBoundingClientRect(), total = r.height - innerHeight;
+  var p = Math.min(1, Math.max(0, -r.top / Math.max(1,total)));
+  var i = Math.min(3, Math.floor(p*4 - .001 + (p>=1?1:0))); if (i<0) i=0;
+  steps.forEach(function(s,ix){ s.classList.toggle("on", ix===i); });
+  dots.forEach(function(d,ix){ d.classList.toggle("on", ix===i); });
+  if (scrollP) scrollP.set(i);
+}
+addEventListener("scroll", storyUpdate, {passive:true}); addEventListener("resize", storyUpdate); storyUpdate();
+
+/* ---------- reveal ---------- */
+var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }); }, {threshold:.12, rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv,.priv .line").forEach(function(e){ io.observe(e); });
+document.querySelectorAll(".priv .line").forEach(function(e,i){ e.style.transitionDelay = (i*.18)+"s"; });
+
+/* ---------- honest zoom demo ---------- */
+var zr = document.getElementById("zrange"), zsvg = document.getElementById("zsvg"), zread = document.getElementById("zr"),
+    zl = document.getElementById("zl"), zd = document.getElementById("zd"), zdesc = document.getElementById("zdesc"),
+    zb = document.getElementById("zbadge"), zbt = document.getElementById("zbt"), zones = document.querySelectorAll("#zones div");
+var COL = ["#ffffff","#ffcc40","#ff9f0a"];
+var TXT = [["Sensor zoom","Real pixels straight from the camera."],["Enhanced","Cropped and carefully resampled. Mostly real detail."],["Extreme","Far beyond the sensor. Shapes are reliable; fine detail is approximate."]];
+function zoomUpdate(){
+  var t = zr.value/1000, z = Math.pow(40, t);
+  var zone = z<=10 ? 0 : (z<=20 ? 1 : 2);
+  zsvg.style.transform = "scale("+z.toFixed(3)+")";
+  var blur = z<=10 ? 0 : (z-10)*.12;
+  zsvg.style.filter = blur ? "blur("+blur.toFixed(2)+"px)" : "none";
+  zread.textContent = z<10 ? z.toFixed(1).replace(".0","") : Math.round(z);
+  zl.textContent = TXT[zone][0]; zdesc.textContent = TXT[zone][1]; zd.style.background = COL[zone];
+  zones.forEach(function(e,i){ e.classList.toggle("on", i===zone); e.style.background = i===zone ? COL[i] : "transparent"; });
+  zb.classList.toggle("hidden", zone===0); zbt.textContent = zone===1 ? "Enhanced" : "Extreme · approximate detail";
+  zb.querySelector(".zdot").style.background = COL[zone];
+  var pct = (t*100).toFixed(1);
+  zr.style.setProperty("--trk","linear-gradient(90deg,"+COL[zone]+" "+pct+"%,#262932 "+pct+"%)");
+}
+(function scale(){ var sc = document.getElementById("zscale"); [1,2,5,10,20,40].forEach(function(v){ var s=document.createElement("span"); s.textContent=v+"×"; s.style.left=(Math.log(v)/Math.log(40)*100)+"%"; sc.appendChild(s); }); })();
+zr.addEventListener("input", zoomUpdate); zoomUpdate();
+
+/* ---------- manual demo ---------- */
+var rI=document.getElementById("rISO"), rS=document.getElementById("rSH"), rF=document.getElementById("rFO");
+var vI=document.getElementById("vISO"), vS=document.getElementById("vSH"), vF=document.getElementById("vFO");
+var pI=document.getElementById("pISO"), pS=document.getElementById("pSH"), pF=document.getElementById("pFO");
+var msvg=document.getElementById("msvg"), mn=document.getElementById("mnoise");
+function manualUpdate(){
+  var iso = Math.round(25*Math.pow(3200/25, rI.value/100)), shs = Math.pow(2, 10 - rS.value/100*10) ; // 1/1024 .. 1s
+  var shLabel = shs>=2 ? "1/"+Math.round(shs) : (shs>=1 ? "1/"+Math.round(shs) : (shs>.5? "1/"+Math.round(shs):"1/"+Math.round(shs)));
+  var secs = 1/shs, fo = rF.value/100;
+  vI.textContent = iso; vS.textContent = secs>=.4 ? secs.toFixed(1)+"s" : "1/"+Math.round(shs);
+  vF.textContent = Math.abs(fo-.5)<.08 ? "Subject" : (fo<.5 ? "Near" : "Far");
+  pI.textContent = iso<200 ? "Clean and sharp, but needs plenty of light." : (iso<800 ? "Brighter. A little grain starts to appear." : "Very bright, but grainy.");
+  pS.textContent = secs<1/125 ? "Freezes motion. Needs more light." : (secs<1/30 ? "Balanced for a steady hand." : "Brighter, but moving things blur.");
+  pF.textContent = Math.abs(fo-.5)<.08 ? "The person is sharp." : "The person is out of focus.";
+  var exposure = Math.log2(iso/100) + Math.log2(secs*250);  // stops vs. base
+  var br = Math.min(1.9, Math.max(.35, Math.pow(2, exposure*.35)));
+  var grain = Math.min(.55, Math.max(0, (Math.log2(iso/100))/6));
+  var motion = Math.max(0, (secs-1/60)*14), defocus = Math.abs(fo-.5) > .08 ? (Math.abs(fo-.5)-.08)*14 : 0;
+  msvg.style.filter = "brightness("+br.toFixed(2)+") blur("+Math.min(7,motion+defocus).toFixed(2)+"px)";
+  mn.style.opacity = grain.toFixed(2);
+  [[rI,"#ffcc40"],[rS,"#ffcc40"],[rF,"#ffcc40"]].forEach(function(a){ var p=a[0].value; a[0].style.setProperty("--trk","linear-gradient(90deg,"+a[1]+" "+p+"%,#262932 "+p+"%)"); });
+}
+[rI,rS,rF].forEach(function(r){ r.addEventListener("input", manualUpdate); }); manualUpdate();
+
+})();
+</script>
+</body>
+</html>
